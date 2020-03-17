@@ -1,11 +1,12 @@
 import 'package:asap/components/dropdownicon.dart';
+import 'package:asap/utils/navigator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class PhonePage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => _PhoneState();
-  
+ 
 }
 
 class _PhoneState extends State<PhonePage> {
@@ -54,7 +55,7 @@ class _PhoneState extends State<PhonePage> {
                       padding: EdgeInsets.all(8),
                       child: TextField(
                         autofocus: true,
-                        keyboardType: TextInputType.numberWithOptions(),
+                        keyboardType: TextInputType.number,
                         style: TextStyle(
                           fontSize: 24
                         ),
@@ -68,7 +69,7 @@ class _PhoneState extends State<PhonePage> {
               ),
             ),
             Expanded(
-              flex: 5,
+              flex: 6,
               child: (Container()),
             ),
             Expanded(
@@ -93,7 +94,7 @@ class _PhoneState extends State<PhonePage> {
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.arrow_forward),
-        onPressed: () => {},
+        onPressed: () => NavigatorUtil.goToSmsPhone(context),
         backgroundColor: Color(0xffF0C808),
       ),
     );

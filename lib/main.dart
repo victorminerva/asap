@@ -8,8 +8,7 @@ class AsapApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashPage(),
-      routes: routes,
+      home: SplashPage()
     );
   }
 }

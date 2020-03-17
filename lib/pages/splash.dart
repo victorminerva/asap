@@ -1,12 +1,7 @@
 import 'dart:async';
 
-import 'package:asap/pages/intro.dart';
 import 'package:asap/utils/navigator.dart';
 import 'package:flutter/material.dart';
-
-var routes = <String, WidgetBuilder> {
-  "/intro": (BuildContext context) => IntroPage(),
-};
 
 class SplashPage extends StatefulWidget {
   

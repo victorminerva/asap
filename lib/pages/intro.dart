@@ -1,11 +1,13 @@
 import 'package:asap/components/dropdownicon.dart';
 import 'package:asap/pages/phone.dart';
-import 'package:asap/utils/navigator.dart';
 import 'package:flutter/material.dart';
 
-var routes = <String, WidgetBuilder> {
-  "/phone": (BuildContext context) => PhonePage()
-};
+class AlwaysDisabledFocusNode extends FocusNode {
+  @override
+  bool consumeKeyboardToken() {
+    return false;
+  }
+}
 
 class IntroPage extends StatefulWidget {
 
@@ -94,7 +96,7 @@ class IntroPageState extends State<IntroPage> {
                                     builder: (context) => PhonePage(),
                                   ));
                               },
-                              autofocus: false,
+                              focusNode: AlwaysDisabledFocusNode(),
                               keyboardType: TextInputType.numberWithOptions(),
                               style: TextStyle(
                                 fontSize: 24
